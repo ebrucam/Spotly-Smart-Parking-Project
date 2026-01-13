@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOTLY - Ev Garajını Kirala</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* HERO SECTION GÜNCELLEMESİ (Kampanyayı Sığdırmak İçin) */
+        .hero {
+            /* Yükseklik artık içeriğe göre uzayacak */
+            height: auto;
+            min-height: 100vh;
+            padding-top: 120px; /* Header payı */
+            padding-bottom: 50px;
+        }
+
+        /* KAMPANYA KARTI (Görünürlüğü Arttırıldı) */
+        .campaign-section {
+            background: rgba(0, 0, 0, 0.6); /* Yarı saydam siyah */
+            backdrop-filter: blur(10px); /* Buzlu cam efekti */
+            border: 2px solid #E03C31; /* Kırmızı çerçeve (Dikkat çekmesi için) */
+            color: white;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 3rem; /* Üstteki yazıdan boşluk */
+            width: 90%;
+            max-width: 900px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(224, 60, 49, 0.3); /* Kırmızımsı gölge */
+            position: relative;
+            overflow: hidden;
+            text-align: left; /* İç metin sola hizalı */
+        }
+        
+        .campaign-content {
+            z-index: 2;
+            flex: 1;
+        }
+
+        .campaign-badge {
+            background-color: #E03C31; /* Canlı Kırmızı */
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+            box-shadow: 0 2px 10px rgba(224, 60, 49, 0.4);
+            animation: pulse 2s infinite; /* Yanıp sönme efekti */
+        }
+
+        /* DİKKAT ÇEKEN ANİMASYON */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .campaign-logo {
+            font-size: 6rem;
+            opacity: 0.15;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-15deg);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            SP<i class="fa-solid fa-location-dot" style="color: #A4D65E;"></i>TLY
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#nasil-calisir">Rehber</a></li>
+                <li><a href="#garajlar">Garajlar</a></li>
+            </ul>
+        </nav>
+        <button class="login-btn">Giriş Yap</button>
+    </header>
+
+    <section class="hero">
+        <h1>Park Yeri Arama,<br>Komşuna Park Et.</h1>
+        <p>İstanbul'un en yoğun noktalarında, bina sakinlerinin kullanmadığı özel garajları güvenle kirala.</p>
+        
+        <a href="#garajlar" class="cta-button">Garaj Bul</a>
+
+        <div class="campaign-section">
+            <div class="campaign-content">
+                <span class="campaign-badge"><i class="fa-solid fa-fire"></i> DERBİ ZAMANI</span>
+                
+                <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; line-height: 1.3;">Maç Günü Park Stresi Bitti!</h2>
+                <p style="opacity: 0.9; font-size: 1rem; margin-bottom: 0;">
+                    Beşiktaş JK biletini göster, stadyuma 5 dk mesafedeki garajlarda <strong>%25 İndirim</strong> kazan.
+                </p>
+            </div>
+            
+            <i class="fa-solid fa-futbol campaign-logo"></i>
+            
+            <a href="#garajlar" style="background: white; color: #E03C31; padding: 10px 25px; border-radius: 50px; font-weight: 700; text-decoration: none; margin-left: 20px; white-space: nowrap; z-index: 3;">
+                Yerini Kap <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </section>
+
+    <section class="guide-section" id="nasil-calisir">
+        <div class="section-header">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #2D3436;">Nasıl Çalışır?</h2>
+            <p style="color: #636E72; margin-bottom: 4rem;">Sokak sokak gezmek yok. Ev sahibinin boş garajını rezerve et, QR kodla giriş yap.</p>
+        </div>
+
+        <div class="guide-steps">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <h3>Konumunu Seç</h3>
+                <p>Gitmek istediğin sokağı haritadan işaretle, o bölgedeki müsait bina altı garajları listele.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-icon"><i class="fa-solid fa-sliders"></i></div>
+                <h3>Karşılaştır & Rezerve Et</h3>
+                <p>Garaj fotoğraflarını ve fiyatları incele. Sana uygun saat aralığını seçerek yerini ayırt.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Güvenli Ödeme</h3>
+                <p>Kredi kartınla %100 güvenli ödeme yap. Anında dijital biletin ve QR kodun telefonuna gelsin.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-icon"><i class="fa-solid fa-qrcode"></i></div>
+                <h3>Temassız Giriş</h3>
+                <p>Binaya vardığında mobil uygulamadan garaj kapısını aç veya QR kodunu okutarak park et.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="spots-section" id="garajlar">
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+            <h2>Beşiktaş - Kiralık Ev Garajları</h2>
+            <p style="margin: 0; text-align: left;">Bina sakinleri tarafından paylaşılan güvenli noktalar.</p>
+        </div>
+
+        <div class="spots-grid">
+            <div class="spot-card">
+                <img src="https://images.pexels.com/photos/1004409/pexels-photo-1004409.jpeg?auto=compress&cs=tinysrgb&w=600" class="spot-img" alt="Bina Garajı">
+                <div class="card-body">
+                    <span class="badge" style="background-color: #E03C31; color: white;">DERBİ FIRSATI</span>
+                    <div class="spot-title">Abbasağa Apt. Kapalı Garaj</div>
+                    <div class="spot-location"><i class="fa-solid fa-location-arrow"></i> Maşuklar Yokuşu</div>
+                    <div class="card-footer">
+                        <div class="price">90₺ <span style="font-size:0.8rem; font-weight:400;">/saat</span></div>
+                        <a href="reservation.html" target="_blank" class="reserve-link">Rezerve Et <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <img src="https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&w=600" class="spot-img" alt="Site Otoparkı">
+                <div class="card-body">
+                    <span class="badge" style="background-color: #E3F2FD; color: #0D47A1;">7/24 GÜVENLİK</span>
+                    <div class="spot-title">Vişnezade Site İçi Alan</div>
+                    <div class="spot-location"><i class="fa-solid fa-location-arrow"></i> Şair Nedim Cd.</div>
+                    <div class="card-footer">
+                        <div class="price">120₺ <span style="font-size:0.8rem; font-weight:400;">/saat</span></div>
+                        <a href="reservation.html" target="_blank" class="reserve-link">Rezerve Et <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <img src="https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?auto=compress&cs=tinysrgb&w=600" class="spot-img" alt="Müstakil Garaj">
+                <div class="card-body">
+                    <span class="badge" style="background-color: #FFF4E5; color: #B76E00;">GENİŞ ARAÇ</span>
+                    <div class="spot-title">Akaretler Müstakil Ev Önü</div>
+                    <div class="spot-location"><i class="fa-solid fa-location-arrow"></i> Spor Cd.</div>
+                    <div class="card-footer">
+                        <div class="price">100₺ <span style="font-size:0.8rem; font-weight:400;">/saat</span></div>
+                        <a href="reservation.html" target="_blank" class="reserve-link">Rezerve Et <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">SPOTLY</div>
+        <p class="copyright">Copyright © 2026 <strong>SPOTLY A.Ş.</strong> SPOTLY markası ve logosu, SPOTLY A.Ş.'nin tescilli markasıdır.</p>
+        <div class="app-store-btns">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+        </div>
+    </footer>
+
+</body>
+</html>

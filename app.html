@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>SPOTLY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="app-style.css">
+</head>
+<body>
+
+<div class="iphone-frame">
+    <div class="notch"></div>
+
+    <div class="screen-content">
+        <header>
+            <div class="logo">SPOTLY</div>
+            <div class="avatar" onclick="window.location.href='profile.html'"></div>
+        </header>
+
+        <div class="search-container">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass" style="color:#999;"></i>
+                <input type="text" placeholder="Etkinlik ara...">
+                <button class="search-btn-green"><i class="fa-solid fa-sliders"></i></button>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <div class="feature-card" onclick="window.location.href='map.html'">
+                <div class="icon-circle"><i class="fa-regular fa-futbol"></i></div>
+                <div class="card-info">
+                    <h3>FOOTBALL MATCHES</h3>
+                    <p style="color: #E03C31; font-weight:700;">Beşiktaş Derbisi 🔥</p>
+                </div>
+                <a href="map.html" class="btn-small">View</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-circle"><i class="fa-solid fa-microphone-lines"></i></div>
+                <div class="card-info">
+                    <h3>CONCERTS</h3>
+                    <p>Zorlu PSM</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-circle"><i class="fa-solid fa-car"></i></div>
+                <div class="card-info">
+                    <h3>VALET PARKING</h3>
+                    <p>Premium Service</p>
+                </div>
+            </div>
+            
+             <div style="padding:20px; text-align:center; color:#ccc;">
+                 <i class="fa-solid fa-chevron-down"></i> Daha fazla...
+             </div>
+             <div class="feature-card"><div class="card-info"><h3>DİĞER ETKİNLİKLER</h3><p>Tiyatro, Sinema...</p></div></div>
+             <div class="feature-card"><div class="card-info"><h3>KAMPANYALAR</h3><p>%20 İndirim</p></div></div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="app.html" class="nav-item active"><i class="fa-solid fa-house"></i></a>
+        <a href="map.html" class="nav-item"><i class="fa-regular fa-map"></i></a>
+        <a href="tickets.html" class="nav-item"><i class="fa-solid fa-ticket"></i></a>
+        <a href="profile.html" class="nav-item"><i class="fa-regular fa-user"></i></a>
+    </nav>
+</div>
+
+</body>
+</html>

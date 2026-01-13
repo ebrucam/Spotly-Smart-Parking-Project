@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Harita</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="app-style.css">
+</head>
+<body>
+
+<div class="iphone-frame">
+    <div class="notch"></div>
+
+    <div class="screen-content" style="padding-top:0;"> <div style="position: absolute; top: 40px; left: 20px; z-index: 10;">
+            <a href="app.html" style="background:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; color:#333; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+        </div>
+
+        <div class="map-full">
+            <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -100%); text-align:center;">
+                <div style="background:black; color:white; padding:5px 10px; border-radius:8px; font-size:0.8rem; margin-bottom:5px;">120₺</div>
+                <i class="fa-solid fa-location-dot" style="font-size:2.5rem; color:var(--primary);"></i>
+            </div>
+        </div>
+
+        <div class="details-sheet">
+            <h2 style="margin-bottom:10px;">Vişnezade Otopark</h2>
+            <div style="display:flex; gap:15px; color:#666; font-size:0.9rem; margin-bottom:20px;">
+                <span><i class="fa-solid fa-location-dot"></i> 0.3 km</span>
+                <span><i class="fa-solid fa-star" style="color:orange;"></i> 4.8</span>
+            </div>
+            <h1 style="font-size:2rem; color:#333;">120₺ <span style="font-size:1rem; font-weight:400; color:#999;">/ 3 saat</span></h1>
+            <button class="book-btn" onclick="window.location.href='tickets.html'">Hemen Rezerve Et</button>
+            <div style="height:50px;"></div> </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="app.html" class="nav-item"><i class="fa-solid fa-house"></i></a>
+        <a href="map.html" class="nav-item active"><i class="fa-regular fa-map"></i></a>
+        <a href="tickets.html" class="nav-item"><i class="fa-solid fa-ticket"></i></a>
+        <a href="profile.html" class="nav-item"><i class="fa-regular fa-user"></i></a>
+    </nav>
+</div>
+
+</body>
+</html>
